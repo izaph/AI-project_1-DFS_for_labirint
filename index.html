@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFS Labyrinth Solver</title>
+    <link rel="stylesheet" href="style.css">  <!-- Ensure this line is present -->
+</head>
+<body>
+    <h1>DFS Labyrinth Solver</h1>
+
+    <div class="controls">
+        <label>Maze Size: 
+            <input type="number" id="rows" min="1" placeholder="Rows" oninput="validateInput(this)"> x 
+            <input type="number" id="cols" min="1" placeholder="Cols" oninput="validateInput(this)">
+        </label>
+        <br>
+        <label>Start Position: 
+            <input type="number" id="startX" min="0" placeholder="Start X" oninput="validatePosition('startX', 'rows')"> , 
+            <input type="number" id="startY" min="0" placeholder="Start Y" oninput="validatePosition('startY', 'cols')">
+        </label>
+        <br>
+        <label>Exit Position: 
+            <input type="number" id="exitX" min="0" placeholder="Exit X" oninput="validatePosition('exitX', 'rows')"> , 
+            <input type="number" id="exitY" min="0" placeholder="Exit Y" oninput="validatePosition('exitY', 'cols')">
+        </label>
+        <br>
+        <label>Number of Walls: 
+            <input type="number" id="walls" min="0" placeholder="Walls" oninput="validateWalls()">
+        </label>
+        <br>
+        <button onclick="generateMaze()">Generate Labirint</button>
+        <button onclick="solveMaze()">Solve with DFS</button>
+        
+
+    </div>
+
+    <div id="maze-container"></div>
+    <div id="path-output" style="margin-top: 10px; font-size: 18px;"></div>
+
+    <script src="script.js"></script>  <!-- Ensure this is present -->
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#maze-container {
+    display: grid;
+    margin: 20px auto;
+    grid-gap: 2px;
+    justify-content: center;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.wall {
+    background-color: black;
+}
+
+.path {
+    background-color: green;
+}
+
+.start {
+    background-color: blue;
+    color: white;
+}
+
+.exit {
+    background-color: red;
+    color: white;
+}
+
+.empty {
+    background-color: white;
+    border: 1px solid #ddd;
+}
